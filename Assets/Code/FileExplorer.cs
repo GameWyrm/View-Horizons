@@ -9,7 +9,7 @@ public class FileExplorer
     public static List<NewHorizonsMod> GetMods()
     {
         List<NewHorizonsMod> modlist;
-        string[] dirs = Directory.GetDirectories(@"%APPDATA%\OuterWildsModManager\OWML\Mods");
+        string[] dirs = Directory.GetDirectories(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\OuterWildsModManager\\OWML\\Mods");
         modlist = new List<NewHorizonsMod>();
 
         foreach (string dir in dirs)
