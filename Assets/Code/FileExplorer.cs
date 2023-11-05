@@ -18,7 +18,7 @@ public class FileExplorer
             {
                 NewHorizonsMod mod = new NewHorizonsMod();
                 mod.path = dir;
-                mod.name = dir.Replace(Directory.GetParent(dir).FullName, "");
+                mod.name = dir.Replace(Directory.GetParent(dir).FullName + "\\", "");
                 string[] modSubstrings = mod.name.Split('.');
                 mod.shortName = modSubstrings[modSubstrings.Length - 1];
                 modlist.Add(mod);
